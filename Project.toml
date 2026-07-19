@@ -10,6 +10,10 @@ libbposit_jll = "55cfc47e-764c-5ead-a4c5-49efd926d0c3"
 
 [compat]
 julia = "1.10"
+Aqua = "0.8"
+LinearAlgebra = "1"
+Random = "1"
+Test = "1"
 libbposit_jll = "0.1"
 
 [extras]
