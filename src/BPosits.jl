@@ -1,3 +1,5 @@
+module BPosits
+
 """
     BPosits
 
@@ -5,8 +7,7 @@ Bounded-posit arithmetic. Provides the `BPosit8`, `BPosit16`, `BPosit32`, and `B
 
 BPosit is a posit variant with a capped regime and full exponent field, giving every value at least `p_min` fraction bits and a uniform log-relative-error bound.
 """
-
-module BPosits
+BPosits
 
 using libbposit_jll: libbposit
 using LinearAlgebra
