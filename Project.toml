@@ -4,13 +4,14 @@ version = "0.1.0"
 authors = ["James Quinlan <james.quinlan@maine.edu>"]
 
 [deps]
-Libdl = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+libbposit_jll = "55cfc47e-764c-5ead-a4c5-49efd926d0c3"
 
 [compat]
 julia = "1.10"
+libbposit_jll = "0.1"
 
 [extras]
 Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
