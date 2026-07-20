@@ -7,9 +7,9 @@
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) -->
 
 
-![Scientific Computing](https://img.shields.io/badge/Scientific%20Computing-Julia-blue)
 ![Numerical Computing](https://img.shields.io/badge/Numerical-Computing-success)
-​![Mixed Precision](https://img.shields.io/badge/Mixed-Precision-red)
+![Scientific Computing](https://img.shields.io/badge/Scientific%20Computing-Julia-red)
+​![Mixed Precision](https://img.shields.io/badge/Mixed-Precision-purple)
 
 
 BPosits.jl is a Julia package implementing **Bounded Posits (BPosit)** -- a posit variant with a capped regime and a guaranteed precision floor.
