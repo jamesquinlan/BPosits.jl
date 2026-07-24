@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/jamesquinlan/BPosits.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/jamesquinlan/BPosits.jl/actions/workflows/CI.yml)
 [![codecov](https://codecov.io/github/jamesquinlan/BPosits.jl/graph/badge.svg?token=KO0KVNKYSP)](https://codecov.io/github/jamesquinlan/BPosits.jl)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21532708.svg)](https://doi.org/10.5281/zenodo.21532708)
 <!-- 
 [![Aqua](https://img.shields.io/badge/Aqua-tested-brightgreen)](...)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) -->
@@ -64,4 +65,24 @@ dot([x, y], [y, x], quire=true) # exact accumulation
 
 ## License
 
-MIT License. See LICENSE for details.
+MIT License. See [LICENSE](https://github.com/jamesquinlan/BPosits.jl/blob/main/LICENSE) for details.
+
+
+## Reference
+
+Quinlan, J. (2026). Bounded Posits (BPosit): a posit variant with a capped regime and a guaranteed precision floor. (Version v0.1.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21532708
+
+
+```bibtex
+@software{quinlan2026bposit,
+  author       = {Quinlan, James},
+  title        = {Bounded Posits (BPosit): a posit variant with a
+                   capped regime and a guaranteed precision floor.},
+  month        = jul,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {v0.1.0},
+  doi          = {10.5281/zenodo.21532708},
+  url          = {https://doi.org/10.5281/zenodo.21532708},
+}
+```
