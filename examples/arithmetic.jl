@@ -11,3 +11,6 @@ f = a - b
 printbits(a)
 printbits(b)
 printbits(c)
+printbits(d)
+printbits(e)
+printbits(f)
