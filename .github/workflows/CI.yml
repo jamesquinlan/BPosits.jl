@@ -20,7 +20,7 @@ jobs:
         os:
           - ubuntu-latest
             # - windows-latest
-          - macos-13        # x86_64
+            # - macos-13        # x86_64; re-enable after confirming Yggdrasil macOS artifact
     steps:
       - uses: actions/checkout@v4
       - uses: julia-actions/setup-julia@v2
