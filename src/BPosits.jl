@@ -72,7 +72,7 @@ function _bitfields(x::T) where T <: AnyBPosit
     neg && (u = -u)
     w = UInt64(u) << (64 - n + 1)
     rbit = w >>> 63 == 1
-    cap = rbit ? kmax + 1 : kmax
+    cap = kmax + 1
     run = min(rbit ? leading_ones(w) : leading_zeros(w), cap)
     k = rbit ? run - 1 : -run
     consumed = run + (run < cap ? 1 : 0)
@@ -385,6 +385,11 @@ end
 
 Base.show(io::IO, x::AnyBPosit) = print(io, isnan(x) ? "NaR" : Float64(x))
 Base.promote_rule(::Type{T}, ::Type{S}) where {T <: AnyBPosit, S <: Real} = T
+# BigFloat has its own promote_rule(BigFloat, T::AbstractFloat) = BigFloat in Julia base,
+# which conflicts with the general Real rule above and causes infinite recursion in
+# promote_result.  Explicit override: BigFloat wins (it is the arbitrary-precision escape
+# hatch; silently truncating it to a BPosit type would be a surprise).
+Base.promote_rule(::Type{T}, ::Type{BigFloat}) where {T <: AnyBPosit} = BigFloat
 
 function Base.nextfloat(x::T) where T <: AnyBPosit
     isnan(x) && return x
