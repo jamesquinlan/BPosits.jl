@@ -47,6 +47,14 @@ The C backend ([`libbposit`](https://github.com/jamesquinlan/libbposit), ISO C99
 
 The Julia layer defines the four widths as primitive subtypes of `AbstractFloat` with the complete numeric interface: comparisons (two's-complement bit-pattern order), rounding and integer conversion, `exponent`/`significand`/`frexp`/`precision`, hashing, exact `BigFloat` conversion, wider-wins promotion between widths, and `rand`.
 
+## Testing
+
+The test suite (`Pkg.test()`) runs ~200k assertions in under 10 seconds, including exhaustive correctness checks over all 65,535 non-NaR `BPosit16` bit patterns:
+
+- **Round-trip**: every `BPosit16` value satisfies `Float64(x) == Float64(significand(x)) * 2.0^exponent(x)`
+- **Widening**: every `BPosit16` value widens to `BPosit64` exactly and narrows to `BPosit8` identically to the Float64 route
+- **Arithmetic and quire**: spot-checked at all widths; fused operations verified against the exact quire reference over 1,000 random trials per width
+
 ## Installation and Usage
 
 ```julia
